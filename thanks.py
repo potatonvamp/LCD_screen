@@ -11,8 +11,12 @@ from adafruit_display_shapes.roundrect import RoundRect
 from adafruit_display_shapes.triangle import Triangle
 from adafruit_display_shapes.line import Line
 
+
+
 # Colors
 BACKGROUND = 0XFFFFFF
+
+
 
 displayio.release_displays()
 
@@ -35,4 +39,26 @@ bg_sprite = displayio.TileGrid(color_bitmap, pixel_shader=color_palette, x=0, y=
 main_group.append(bg_sprite)
 display.root_group = main_group
 
-Circle(100, 25, 10, 0X000000, 0X000000)
+round_rect = RoundRect(70, 50, 101, 60, 30, fill = 0XFF0000, outline = 0X000000)
+main_group.append(round_rect)
+round_rect = RoundRect(75, 45, 90, 60, 30, fill = 0XFFA500, outline = 0X000000)
+main_group.append(round_rect)
+round_rect = RoundRect(80, 40, 80, 60, 30, fill = 0XFFFF00, outline = 0X000000)
+main_group.append(round_rect)
+rect = Rect(100, 100, 10, 100, fill = 0XFFA500, outline = 0X000000)
+main_group.append(rect)
+rect = Rect(130, 100, 10, 100, fill = 0XFFA500, outline = 0X000000)
+main_group.append(rect)
+circle = Circle(120, 87, 25, fill = 0X964B00, outline = 0X000000)
+main_group.append(circle)
+circle = Circle(120, 67, 20, fill = 0X964B00, outline = 0X000000)
+main_group.append(circle)
+circle = Circle(130, 57, 3, fill = 0X000000, outline = 0X000000)
+main_group.append(circle)
+circle = Circle(110, 57, 3, fill = 0X000000, outline = 0X000000)
+main_group.append(circle)
+round_rect = RoundRect(120, 77, 10, 20, 5, fill = 0XFF0000, outline = 0X000000)
+main_group.append(round_rect)
+tri = Triangle(110, 67, 130, 67, 120, 87, fill = 0XFFA500, outline = 0X000000)
+main_group.append(tri)
+
