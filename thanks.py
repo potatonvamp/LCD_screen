@@ -15,7 +15,8 @@ from adafruit_display_shapes.line import Line
 
 # Colors
 BACKGROUND = 0XFFFFFF
-
+OTHER = 0X964B00
+BLACK = 0x000000
 
 
 displayio.release_displays()
@@ -95,7 +96,11 @@ while True:
     if feather3.x >= 1:
         direction_o *= -1
     feather3.x += (velocity_o * direction_o)
-    if eye1.r >= 1:
-        eye1.r += radius_r
-    time.sleep(0.2)
-    
+    eye1.outline = BLACK
+    time.sleep(0.1)
+    eye1.outline = OTHER
+    time.sleep(0.1)
+    eye2.outline = BLACK
+    time.sleep(0.1)
+    eye2.outline = OTHER
+    time.sleep(0.1)
